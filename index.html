@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff"><title>Walker ContentMaster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://i.ibb.co/5XW25tjy/6cf68c69-231d-4836-9453-ee1b1602a35d.jpg"><link rel="stylesheet" href="app.css">
+  <script src="https://telegram.org/js/telegram-web-app.js?64"></script>
+</head>
+<body>
+<div class="app-shell">
+  <div class="scrim" id="scrim"></div>
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="menuClose" aria-label="Close menu">✕</button>
+    <a class="brand" href="#dashboard"><img class="brand-mark" src="https://i.ibb.co/5XW25tjy/6cf68c69-231d-4836-9453-ee1b1602a35d.jpg" alt="Walker"><span><b>WALKER</b><small>CONTENTMASTER</small></span></a>
+    <div class="workspace"><span class="live-dot"></span><span>BOT WORKSPACE</span><span class="workspace-tag">…</span></div>
+    <nav id="nav">
+      <div class="nav-label">WORKSPACE</div>
+      <a class="nav-link active" data-page="dashboard"><i>▦</i>Overview</a>
+      <a class="nav-link" data-page="spaces"><i>◫</i>My Spaces</a>
+      <a class="nav-link" data-page="publishing"><i>↗</i>Publication</a>
+      <a class="nav-link" data-page="folders"><i>▤</i>Folders</a>
+      <a class="nav-link" data-page="scheduling"><i>◷</i>Scheduling</a>
+      <a class="nav-link" data-page="saved"><i>▣</i>Saved Messages</a>
+      <div class="nav-label">CONFIGURATION</div>
+      <a class="nav-link" data-page="formatting"><i>✎</i>Formatting & Signatures</a>
+      <a class="nav-link" data-page="settings"><i>⚙</i>Settings</a>
+      <a class="nav-link" data-page="statistics"><i>⌁</i>Statistics</a>
+      <div class="nav-label">ACCOUNT</div>
+      <a class="nav-link" data-page="plans"><i>◇</i>Plans & Trials</a>
+      <a class="nav-link" data-page="points"><i>✧</i>Points & Rentals</a>
+      <a class="nav-link" data-page="referrals"><i>♧</i>Referral</a>
+      <a class="nav-link" data-page="help"><i>?</i>Help & Support</a>
+      <div class="nav-label staff-nav hidden" id="staffLabel">ADMINISTRATION</div>
+      <a class="nav-link staff-nav hidden" data-page="staff" id="staffLink"><i>♜</i>Staff Console</a>
+    </nav>
+    <div class="sidebar-bottom"><div class="bot-status"><span class="live-dot"></span><span><b>Bot connection</b><small id="botStatus">Checking status…</small></span></div><div class="sidebar-foot">WALKER CONTENTMASTER <span>·</span> WEB</div></div>
+  </aside>
+  <main class="main-area">
+    <div class="sim-bar hidden" id="simBar"><b>SIMULATION MODE</b> — no Telegram session or database detected. Data stays in this browser. <a href="#" onclick="simReset();return false">Reset demo data</a></div>
+    <header class="topbar"><button class="icon-btn mobile-menu" id="menuToggle">☰</button><div class="breadcrumbs">Walker ContentMaster <span>/</span> <b id="crumb">Overview</b></div><div class="top-actions"><span class="plan-chip" id="planChip">FREE PLAN</span><button class="user-chip" id="userChip"><span class="avatar" id="avatar">W</span><span id="userName">Telegram user</span><span>⌄</span></button></div></header>
+    <div class="content" id="content"><div class="loading"><span class="spinner"></span> Connecting to Walker…</div></div>
+    <footer>Walker ContentMaster <span>·</span> Web control panel</footer>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<dialog id="modal"><form method="dialog" class="modal-card"><button class="modal-close" value="cancel">×</button><div id="modalContent"></div></form></dialog>
+<script src="config.js"></script>
+<script src="sim.js"></script>
+<script src="app.js"></script>
+</body></html>
